@@ -32,6 +32,35 @@
       .tp-header-area {
         padding-top: 20px;
       }
+      .product-slide {
+        position: relative;
+      }
+      .product-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0.6) 70%,
+          transparent 100%
+        );
+        color: white;
+        padding: 30px 20px 20px;
+      }
+      .product-info h5 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: white;
+      }
+      .product-info .price {
+        font-size: 24px;
+        font-weight: 700;
+        color: #d90a2c;
+        margin: 0;
+      }
       @media (max-width: 991px) {
         .tp-banner-thumb {
           margin-top: 50px;
@@ -274,7 +303,7 @@
                   class="tp-banner-5-sub-title wow fadeInUp"
                   data-wow-duration="1s"
                   data-wow-delay=".5s"
-                  >Make an impact with every meal.</span
+                  >Deliver Every Meal with Confidence</span
                 >
                 <h4
                   class="tp-banner-5-title wow fadeInUp"
@@ -282,8 +311,9 @@
                   data-wow-duration="1.2s"
                   data-wow-delay=".7s"
                 >
-                  Choose
-                  <span class="text-danger">Premium </span>And Eco-Friendly
+                  Reliable,
+                  <span class="text-danger"> Premium</span>
+                  Containers That Protect And Impress
                 </h4>
                 <div
                   class="tp-banner-5-info d-flex align-items-center wow fadeInUp"
@@ -313,14 +343,38 @@
                 data-wow-delay=".5s"
               >
                 <div class="slick-slider tp-banner-active">
-                  <div>
-                    <img src="assets/img/banner/2x.png" alt="" width="100%" />
+                  <div class="product-slide">
+                    <img
+                      src="assets/img/banner/2x.png"
+                      alt="Kraft Paper Food Box - 2000ml"
+                      width="100%"
+                    />
+                    <div class="product-info">
+                      <h5>Kraft Paper Food Box - 2000ml (Pack of 50pcs)</h5>
+                      <p class="price">GHS 175.00</p>
+                    </div>
                   </div>
-                  <div>
-                    <img src="assets/img/banner/3x.png" alt="" width="100%" />
+                  <div class="product-slide">
+                    <img
+                      src="assets/img/banner/3x.png"
+                      alt="1500ml Fold Pack"
+                      width="100%"
+                    />
+                    <div class="product-info">
+                      <h5>1500ml Fold Pack - Pack of 50pcs</h5>
+                      <p class="price">GHS 190.00</p>
+                    </div>
                   </div>
-                  <div>
-                    <img src="assets/img/banner/4x.png" alt="" width="100%" />
+                  <div class="product-slide">
+                    <img
+                      src="assets/img/banner/4x.png"
+                      alt="Kraft Paper Food Box - 1400ml"
+                      width="100%"
+                    />
+                    <div class="product-info">
+                      <h5>Kraft Paper Food Box - 1400ml (Pack of 50pcs)</h5>
+                      <p class="price">GHS 150.00</p>
+                    </div>
                   </div>
                 </div>
               </div>
