@@ -221,8 +221,36 @@
         display: block;
       }
 
-      .cta-overlay .cta-overlay-btn {
-        pointer-events: auto;
+      .cta-section {
+        margin-top: 50px;
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .cta-title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 25px;
+      }
+
+      .cta-btn-bottom {
+        display: inline-block;
+        background: #2563eb;
+        color: #ffffff;
+        padding: 16px 36px;
+        border-radius: 999px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      }
+
+      .cta-btn-bottom:hover {
+        background: #1e40af;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
       }
 
       .scroll-to-top {
@@ -256,34 +284,6 @@
         transform: translateY(-5px);
       }
 
-      .cta-overlay {
-        position: relative;
-        display: inline-block;
-        width: 100%;
-      }
-
-      .cta-overlay-btn {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #2563eb;
-        color: #ffffff;
-        padding: 14px 32px;
-        border-radius: 999px;
-        font-size: 15px;
-        font-weight: 600;
-        text-decoration: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
-        white-space: nowrap;
-      }
-
-      .cta-overlay-btn:hover {
-        background: #1e40af;
-        transform: translateX(-50%) translateY(-3px);
-      }
-
       @media (max-width: 768px) {
         .products h2 {
           font-size: 24px;
@@ -295,10 +295,13 @@
           padding: 0 15px;
         }
 
-        .cta-overlay-btn {
-          font-size: 13px;
-          padding: 12px 24px;
-          bottom: 15px;
+        .cta-title {
+          font-size: 24px;
+        }
+
+        .cta-btn-bottom {
+          font-size: 15px;
+          padding: 14px 28px;
         }
       }
     </style>
@@ -400,12 +403,13 @@
           <a href="https://www.instagram.com/glam.pack/" target="_blank" rel="noopener noreferrer" class="product-card">
             <img src="assets/img/banner/43x.jpg" alt="Product" />
           </a>
-          <div class="product-card cta-overlay">
-            <a href="https://www.instagram.com/glam.pack/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/img/banner/44x.jpg" alt="Product" />
-            </a>
-            <a href="https://api.whatsapp.com/send/?phone=%2B233246493903" target="_blank" rel="noopener noreferrer" class="cta-overlay-btn">Chat With a Specialist</a>
-          </div>
+          <a href="https://www.instagram.com/glam.pack/" target="_blank" rel="noopener noreferrer" class="product-card">
+            <img src="assets/img/banner/44x.jpg" alt="Product" />
+          </a>
+        </div>
+        <div class="cta-section">
+          <h3 class="cta-title">Let's fix your Packaging</h3>
+          <a href="https://api.whatsapp.com/send/?phone=%2B233246493903" target="_blank" rel="noopener noreferrer" class="cta-btn-bottom">Chat With a Specialist</a>
         </div>
       </div>
     </div>
