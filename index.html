@@ -223,6 +223,65 @@
         display: block;
       }
 
+      .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #2563eb;
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+      }
+
+      .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .scroll-to-top:hover {
+        background: #1e40af;
+        transform: translateY(-5px);
+      }
+
+      .cta-overlay {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+      }
+
+      .cta-overlay-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #2563eb;
+        color: #ffffff;
+        padding: 14px 32px;
+        border-radius: 999px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        white-space: nowrap;
+      }
+
+      .cta-overlay-btn:hover {
+        background: #1e40af;
+        transform: translateX(-50%) translateY(-3px);
+      }
+
       @media (max-width: 768px) {
         .products h2 {
           font-size: 24px;
@@ -235,7 +294,13 @@
         }
 
         .desktop-only {
-          display: none;
+          display: block;
+        }
+
+        .cta-overlay-btn {
+          font-size: 13px;
+          padding: 12px 24px;
+          bottom: 15px;
         }
       }
     </style>
@@ -310,12 +375,15 @@
           <div class="product-card desktop-only">
             <img src="assets/img/banner/10x.jpg" alt="Product" />
           </div>
-          <div class="product-card desktop-only">
+          <div class="product-card desktop-only cta-overlay">
             <img src="assets/img/banner/11x.jpg" alt="Product" />
+            <a href="https://api.whatsapp.com/send/?phone=%2B233246493903" class="cta-overlay-btn">Chat With a Specialist</a>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="scroll-to-top" id="scrollToTop">↑</div>
 
     <script>
       const track = document.getElementById("logoTrack");
@@ -334,6 +402,24 @@
       track.addEventListener("mouseenter", () => clearInterval(interval));
       track.addEventListener("mouseleave", () => {
         interval = setInterval(slide, 2500);
+      });
+
+      // Scroll to top functionality
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add("visible");
+        } else {
+          scrollToTopBtn.classList.remove("visible");
+        }
+      });
+
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
       });
     </script>
   </body>
