@@ -84,6 +84,30 @@
         text-align: center;
       }
 
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+      }
+
+      .logo-img {
+        max-width: 150px;
+        height: auto;
+      }
+
+      .phone-contact {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0f172a;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .phone-contact:hover {
+        color: #2563eb;
+      }
+
       .rating {
         display: flex;
         justify-content: center;
@@ -284,6 +308,20 @@
       }
 
       @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          gap: 20px;
+          margin-bottom: 40px;
+        }
+
+        .logo-img {
+          max-width: 120px;
+        }
+
+        .phone-contact {
+          font-size: 14px;
+        }
+
         .products h2 {
           font-size: 24px;
         }
@@ -308,6 +346,11 @@
 
   <body>
     <div class="container">
+      <div class="header">
+        <img src="assets/img/logo/logo_black.png" alt="Glam Logo" class="logo-img" />
+        <a href="tel:+233308251169" class="phone-contact">+233 30 825 1169</a>
+      </div>
+
       <div class="rating">
         <div class="stars">★★★★★</div>
         <span>4.99 AVERAGE RATING</span>
